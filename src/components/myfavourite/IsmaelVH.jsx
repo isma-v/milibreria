@@ -1,34 +1,25 @@
-import React from 'react';
-import Avatar from '@mui/material/Avatar';
+import React, { useState } from 'react';
+import { TextField, Button, Typography } from '@mui/material';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import IconButton from '@mui/material/IconButton';
+import ModalDialog from './ModalDialog';
 
-function IsmaelVH({ firstName, lastName, bgColor = 'blue', textColor = 'white', size = 'medium', onClick }) {
-  // Función para obtener iniciales
-  const getInitials = (name, surname) => {
-    return `${name.charAt(0)}${surname.charAt(0)}`.toUpperCase();
+const IsmaelVH = ({ onCommentSubmit, onClick, disabled, handleClickOpen }) => {
+  const [comment, setComment] = useState('');
+
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
   };
 
-  // Definir el tamaño del avatar
-  const avatarSize = {
-    small: { width: 40, height: 40, fontSize: 16 },
-    medium: { width: 60, height: 60, fontSize: 20 },
-    large: { width: 80, height: 80, fontSize: 28 }
-  }[size];
+  
+
+ 
 
   return (
-    <Avatar
-      onClick={onClick}
-      sx={{
-        bgcolor: bgColor,
-        color: textColor,
-        width: avatarSize.width,
-        height: avatarSize.height,
-        fontSize: avatarSize.fontSize,
-        cursor: onClick ? 'pointer' : 'default',
-      }}
-    >
-      {getInitials(firstName, lastName)}
-    </Avatar>
+    <IconButton onClick={onClick} disabled={disabled} aria-label="add to favorites">
+      <ChatBubbleOutlineIcon />
+    </IconButton>
   );
-}
+};
 
 export default IsmaelVH;
