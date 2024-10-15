@@ -1,0 +1,27 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as MyFavouriteBorder from "./myfavouriteborder.stories.tsx";
+
+<Meta of={MyFavouriteBorder} title="MyFavourite" />
+
+# MyFavourite
+Componente de botón de favorito con diferentes configuraciones.
+
+#### Example
+<Canvas of={Example} />
+
+## Usage
+```tsx
+import { MyFavourite } from 'milibreria';
+
+function Example() {
+    return (
+        <MyFavourite
+            iconColor="red"
+            disabled={false}
+            onClick={() => alert("Añadido a favoritos!")}
+        />
+    );
+}
+
+export default Example;
