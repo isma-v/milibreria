@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import MyFavourite from './MyFavourite';
+import MyFavourite from '../MyFavourite';
 import { describe, it, expect, vi } from 'vitest'; // Asegúrate de importar 'vi' desde 'vitest'
 
 describe('MyFavourite', () => {

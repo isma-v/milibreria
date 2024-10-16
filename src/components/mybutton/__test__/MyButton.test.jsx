@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import MyButton from './MyButton';
+import MyButton from '../MyButton';
 
 describe('MyButton', () => {
   it('renders with the correct text', () => {

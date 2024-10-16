@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Example from "./example"; //importamos el componente Example
+import Example from "./example"; 
 const meta: Meta<typeof Example> = {
 title: "CustomButton",
 component: Example,

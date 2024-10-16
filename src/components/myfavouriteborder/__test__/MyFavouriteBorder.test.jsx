@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import MyFavouriteBorder from './MyFavouriteBorder';
+import MyFavouriteBorder from '../MyFavouriteBorder';
 import { describe, it, expect, vi } from 'vitest'; // Importa 'vi' de vitest
 
 describe('MyFavouriteBorder', () => {
